@@ -190,6 +190,30 @@ class MyDrive:
         self.delete_folder_from_folder(folder_id, from_folder_id)
         print("Folder deleted from old folder successfully")
 
+    def search_file_in_all_folders(self, file_name):
+        """
+        This method is used to search for a file in all folders on Google Drive
+        :param file_name: name of the file
+        :return: file_id
+        """
+        file_list = self.drive.ListFile({'q': "trashed=false"}).GetList()
+        for file in file_list:
+            if file['title'] == file_name:
+                return file['id']
+        return False
+
+    def search_folder_in_all_folders(self, folder_name):
+        """
+        This method is used to search for a folder in all folders on Google Drive
+        :param folder_name: name of the folder
+        :return: folder_id
+        """
+        file_list = self.drive.ListFile({'q': "trashed=false"}).GetList()
+        for file in file_list:
+            if file['title'] == folder_name:
+                return file['id']
+        return False
+
     def delete_file(self, file_id):
         """
         This method is used to delete a file from Google Drive

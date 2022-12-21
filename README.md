@@ -18,6 +18,10 @@
 > > Moving folders in drive
 > 
 > > Uploading entire directories to drive
+> 
+> > Searching for files in drive
+> 
+> > Searching for folders in drive
 
 ---
 
