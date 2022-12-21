@@ -31,9 +31,29 @@ Here a link on how to do that: [How to enable drive api](https://developers.goog
 
 > You can also create a settings.yaml file and place it in the same directory as the MyDrive.py file (optional)
 
+Example of settings.yaml file:
+    
+    
+    client_config_backend: settings
+    client_config:
+      client_id: "your client id here"
+      client_secret: "your client secret here"
+    save_credentials: True
+    save_credentials_backend: file
+    save_credentials_file: mycredentials.json
+
+    get_refresh_token: True
+
+    oauth_scope:
+      - https://www.googleapis.com/auth/drive.file
+      - https://www.googleapis.com/auth/drive.metadata.readonly
+      - https://www.googleapis.com/auth/drive.appdata
+      - https://www.googleapis.com/auth/drive.install
+
 ---
 ## How to use
-1. Download the repo
+
+1. Clone the repo
 2. Install the requirements (pip install -r requirements.txt)
 3. create your own script and import the functions you need
 4. Dont forget to add the credentials.json (renamed to **client_secrets**) file in the same directory as your script
