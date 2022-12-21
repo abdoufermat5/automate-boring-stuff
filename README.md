@@ -29,6 +29,8 @@ Here a link on how to do that: [How to enable drive api](https://developers.goog
 
 > Once you have done that, you will need to download the credentials.json file and place it in the same directory as the test script (example: in the samples folder where the test.py file is)
 
+> You can also create a settings.yaml file and place it in the same directory as the MyDrive.py file (optional)
+
 ---
 ## How to use
 1. Download the repo

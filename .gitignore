@@ -241,4 +241,6 @@ cython_debug/
 
 data/*.txt
 samples/*.json
+drive_me/*.json
+drive_me/*.yaml
 
